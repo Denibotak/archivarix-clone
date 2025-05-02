@@ -9,9 +9,10 @@ def home():
 
 @app.route('/download')
 def download():
-    # File yang akan diunduh, misalnya file.zip
     file_path = 'archivarix.zip'
     return send_file(file_path, as_attachment=True)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Untuk deployment di Render: gunakan 0.0.0.0 dan PORT dari environment
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
