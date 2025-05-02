@@ -2,31 +2,12 @@
 <html>
 <head>
     <title>Deni Botak</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 50px auto;
-            text-align: center;
-        }
-        input, button {
-            padding: 10px;
-            margin: 10px;
-            width: 80%;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-        }
-    </style>
 </head>
 <body>
-    <h1>Unduh Situs dari Wayback Machine</h1>
-    <form action="/download" method="post">
-        <input type="text" name="url" placeholder="Masukkan URL situs" required><br>
-        <input type="text" name="tanggal" placeholder="(Opsional) Tanggal format YYYYMMDD"><br>
-        <button type="submit">Unduh</button>
+    <h1>Masukkan URL Wayback Machine</h1>
+    <form method="POST" action="/">
+        <input type="text" name="url" placeholder="https://example.com" required>
+        <button type="submit">Download</button>
     </form>
 </body>
 </html>
